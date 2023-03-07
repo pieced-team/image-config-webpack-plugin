@@ -1,6 +1,6 @@
 {
   "name": "@pieced/image-config-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically configuration webpack5 image loader",
   "author": "mingdev <mingdev@163.com>",
   "license": "MIT",
