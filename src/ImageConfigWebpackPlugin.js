@@ -9,11 +9,11 @@ module.exports = class ImageConfigWebpackPlugin {
   }
 
   apply(compiler) {
-    const { constructor, getOptions } = this;
+    const { getOptions } = this;
 
     const cfg = config(getOptions(compiler));
     // Merge config
-    compiler.hooks.afterEnvironment.tap(constructor.name, () => compiler.options.module.rules.push(...cfg.module.rules));
+    compiler.options.module.rules.push(...cfg.module.rules);
     cfg.plugins.forEach((plugin) => plugin.apply(compiler));
   }
 
